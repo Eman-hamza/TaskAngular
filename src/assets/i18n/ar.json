@@ -1,0 +1,37 @@
+{
+    "dir":"rtl",
+    
+    "userinfo":
+    {
+    "Addresources":"إضافة موارد جديدة",
+    "HOME":"الصفحة الرئيسية",
+    "LOGIN":"تسجيل الدخول",
+    "Register":"سجل الآن",
+    "NameofResourcer":"اسم الموارد",
+    "Selectresourcetype":"اختر نوع الموارد",
+    "Bookwithinaday":"حجز خلال يوم",
+    "Bookingduration":"حجز مدة",
+
+    "Theresourceisavailableto":"المورد متاح إلى",
+    "Resourcetime":"وقت المورد",
+    "Servicetime":"وقت الخدمة",
+    "Fixedtime":"وقت ثابت",
+    "Multiplebooking":"الحجز المتعدد",
+    "Onlyone":"واحد فقط",
+    "reservationallinsametime":"كذا شخص لنفس الموعد",
+    "Determinethesupplier":"حدد مواعيد العمل للمورد",
+    "Configure":"تكوين إعدادات الأسبوع الخاص بك هنا. ما عليك سوى تحريك أشرطة التمرير وإضافة / إزالة أوقات الراحة لإعداد ساعات العمل.",
+    "Saturday":"السبت",
+    "Sunday":"الاحد",
+    "Monday":"الاثنين",
+    "Tuesday":"الثلاثاء",
+    "Wednesday":"الأربعاء",
+    "Thursday":"الخميس",
+    "Friday":"الجمعة",
+    "Starttime":"وقت البدء",
+    "Endtime":"وقت الانتهاء",
+    "Traditionalsettings":"اعدادات تقليدية",
+    "AdvancedSettings":"اعدادات متقدمة",
+    "Save" :"حفظ"
+   }
+}

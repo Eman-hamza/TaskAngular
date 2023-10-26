@@ -1,0 +1,37 @@
+{
+    "dir":"ltr",
+    "userinfo":
+    {
+    "Addresources":"Add Resources",
+    "HOME":"Home",
+    "LOGIN":"Login",
+    "Register":"Register Now",
+    "NameofResourcer":"Name of Resourcer",
+    "Selectresourcetype":"Select resource",
+    "Bookwithinaday":"Book within a day",
+    "Bookingduration":"Booking duration",
+
+    "Theresourceisavailableto":"The Resource is available to",
+    "Resourcetime":"Resource time",
+    "Servicetime":"Service time",
+    "Fixedtime":"Fixed time",
+    "Multiplebooking":"Multiple booking",
+    "Onlyone":"Only one ",
+    "reservationallinsametime":"All in same time",
+    "Determinethesupplier":"Determine the supplier's working hours",
+    "Configure":"Configure your week settings here. Simply move the sliders and add/remove break times to set up work hours.",
+    "Saturday":"Saturday",
+    "Sunday":"Sunday",
+    "Monday":"Monday",
+    "Tuesday":"Tuesday",
+    "Wednesday":"Wednesday",
+    "Thursday":"Thursday",
+    "Friday":"Friday",
+    "Starttime":"Start time",
+    "Endtime":"End time",
+    "Traditionalsettings":"Trad settings",
+    "AdvancedSettings" :"Adv Settings",
+    "Save" :"Save"
+   }
+
+}

@@ -1,0 +1,198 @@
+<div class="card mb-5 mt-1" style="border-radius: 15px;" [dir]="'dir' |translate">
+<!---------------------first part---------------------------------------- -->
+        <div class="card-body p-4">
+        <div class="col-md-12 col-lg-12">
+            <div class="row">
+                <div class="col-md-8 col-lg-8">
+                    <h4 class="mb-3" style="font-weight:bold;">{{'userinfo.Determinethesupplier' | translate}}</h4>
+                    <p class="small mb-0">{{'userinfo.Configure' | translate}}</p>
+                </div>
+                <div class="col-md-4 col-lg-4 " style="display:flex;justify-content: center;">
+                    <div class="row" style="border: 1px solid rgb(218, 218, 218);border-radius: 9px;font-size:16px">
+                        <div class="col-md-6 col-lg-6" style="max-width: 260px;line-height: 60px;">
+                            {{'userinfo.AdvancedSettings'
+                            | translate}}
+                        </div>
+                        <div class="col-md-6 col-lg-6 ">
+                            <button class="btn m-1 d-none d-sm-block"
+                            style="background-color:#4F709C ;height: 50px;color:white;max-width: 200px;font-size: 14px;">{{'userinfo.Traditionalsettings'
+                            | translate}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- <div class="m-2"
+        style="border: 1px solid rgb(218, 218, 218);max-width: 250px;height: 60px;border-radius: 9px;;font-size: 14px">{{'userinfo.AdvancedSettings'
+        | translate}}
+</div> -->
+<!-- ******************* second part ******************************* -->
+        <!-- Saturday ...............................-->
+        <div class="row mb-4">
+            <div class="col-md-2 col-lg-2">
+                <div class="container mt-4">
+                    <mat-slide-toggle color="primary" (click)="Saturdayshow()">{{'userinfo.Saturday' | translate}}
+                    </mat-slide-toggle>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="Saturday==true">
+                <app-time-start *ngFor="let item of start[0]"></app-time-start>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="Saturday==true">
+            <!-- <app-time-end></app-time-end> -->
+            <app-time-end *ngFor="let item of end[0]"></app-time-end>
+            </div>
+            <div class="col-md-2 col-lg-2 mt-4"  *ngIf="Saturday==true" (click)="addStart('stur')" (click)="addEnd('stur')">
+                <!-- <app-plus  (click)="addminus('stur')"></app-plus> -->
+                <div class="col-md-2 col-lg-2 mt-4 mb-5">
+                    <!-- <app-minus class="mb-4" *ngFor="let item of minus[0]" (click)="remove('stur')"></app-minus> -->
+                </div>
+            </div>
+            <!-- end -->
+        </div>
+        <hr>
+        <!-- Sunday ------------------------------------------------------------>
+        <div class="row ">
+            <div class="col-md-2 col-lg-2 mb-4 mt-4">
+                <div class="container mt-4">
+                    <mat-slide-toggle color="primary"  (click)="SundayShow()">{{'userinfo.Sunday' | translate}}
+                    </mat-slide-toggle>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="Sunday==true">
+                <app-time-start  *ngFor="let item of start[1]"></app-time-start>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="Sunday==true">
+                <!-- <app-time-end></app-time-end> -->
+                <app-time-end *ngFor="let item of end[1]"></app-time-end>
+            </div>
+            <div class="col-md-2 col-lg-2 mt-4" 
+            *ngIf="Sunday==true">
+            <app-plus  (click)="addStart('sun')" (click)="addEnd('sun')" (click)="addminus('sun')"></app-plus>
+            <div class="col-md-2 col-lg-2 mt-4 mb-5">
+            <app-minus class="mb-4" *ngFor="let item of minus[1]" (click)="remove('sun')"></app-minus>
+            </div>
+            </div>
+            <!-- end -->
+        </div>
+        <hr>
+        <!-- Monday ------------------------------------------------------------>
+        <div class="row ">
+            <div class="col-md-2 col-lg-2 mb-4 mt-4">
+                <div class="container mt-4">
+                    <mat-slide-toggle color="primary" (click)="MondayShow()">{{'userinfo.Monday' | translate}}
+                    </mat-slide-toggle>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="Monday==true">
+                <app-time-start *ngFor="let item of start[2]"></app-time-start>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="Monday==true">
+                <app-time-end *ngFor="let item of end[2]"></app-time-end>
+            </div>
+            <div class="col-md-2 col-lg-2 mt-4 " *ngIf="Monday==true">
+                <app-plus (click)="addStart('mon')" (click)="addEnd('mon')" (click)="addminus('mon')"></app-plus>
+                <div class="col-md-2 col-lg-2 mt-4 mb-5">
+                <app-minus class="mb-4" *ngFor="let item of minus[2]" (click)="remove('mon')"></app-minus>
+            </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Tuesday ---------------------------------------------- -->
+        <div class="row ">
+            <div class="col-md-2 col-lg-2 mb-4 mt-4">
+                <div class="container mt-4">
+                    <mat-slide-toggle color="primary" (click)="TuesdayShow()">{{'userinfo.Tuesday' | translate}}
+                    </mat-slide-toggle>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="Tuesday==true">
+                <app-time-start *ngFor="let item of start[3]"></app-time-start>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="Tuesday==true">
+                <app-time-end *ngFor="let item of end[3]"></app-time-end>
+            </div>
+            <div class="col-md-2 col-lg-2 mt-4" *ngIf="Tuesday==true" >
+                <app-plus (click)="addStart('Tues')" (click)="addEnd('Tues')" (click)="addminus('Tues')"></app-plus>
+                <div class="col-md-2 col-lg-2 mt-4 mb-5">
+                <app-minus class="mb-4" *ngFor="let item of minus[3]" (click)="remove('Tues')"></app-minus>
+            </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Wednesday---------------------------------------------- -->
+        <div class="row ">
+            <div class="col-md-2 col-lg-2 mb-4 mt-4">
+                <div class="container mt-4">
+                    <mat-slide-toggle color="primary" (click)="WednesdayShow()">{{'userinfo.Wednesday' | translate}}
+                    </mat-slide-toggle>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="Wednesday==true">
+                <app-time-start *ngFor="let item of start[4]"></app-time-start>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="Wednesday==true">
+                <app-time-end *ngFor="let item of end[4]"></app-time-end>
+            </div>
+            <div class="col-md-2 col-lg-2 mt-4 mb-5" *ngIf="Wednesday==true" >
+                <app-plus (click)="addStart('Wed')" (click)="addEnd('Wed')" (click)="addminus('Wed')"></app-plus>
+                <div class="col-md-2 col-lg-2 mt-4 mb-5">
+                <app-minus class="mb-4" *ngFor="let item of minus[4]" (click)="remove('Wed')"></app-minus>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Thursday---------------------------------------------- -->
+        <div class="row ">
+            <div class="col-md-2 col-lg-2 mb-4 mt-4">
+                <div class="container mt-4">
+                    <mat-slide-toggle color="primary" (click)="ThursdayShow()">{{'userinfo.Thursday' | translate}}
+                    </mat-slide-toggle>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="
+            Thursday==true">
+            <app-time-start *ngFor="let item of start[5]"></app-time-start>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="
+            Thursday==true">
+            <app-time-end *ngFor="let item of end[5]"></app-time-end>
+            </div>
+            <div class="col-md-2 col-lg-2 mt-4" *ngIf="Thursday==true" >
+                <app-plus (click)="addStart('Thur')" (click)="addEnd('Thur')" (click)="addminus('Thur')"></app-plus>
+                <div class="col-md-2 col-lg-2 mt-4 mb-5">
+                <app-minus class="mb-4" *ngFor="let item of minus[5]" (click)="remove('Thur')"></app-minus>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Friday---------------------------------------------- -->
+        <div class="row ">
+            <div class="col-md-2 col-lg-2 mb-4 mt-4">
+                <div class="container mt-4">
+                    <mat-slide-toggle color="primary" (click)="FridayShow()">{{'userinfo.Friday' | translate}}
+                    </mat-slide-toggle>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="Friday==true">
+                <app-time-start *ngFor="let item of start[6]"></app-time-start>
+            </div>
+            <div class="col-md-4 col-lg-4" *ngIf="Friday==true">
+                <app-time-end *ngFor="let item of end[6]"></app-time-end>
+            </div>
+            <div class="col-md-2 col-lg-2 mt-4 " *ngIf="Friday==true" (click)="addStart('Fri')" (click)="addEnd('Fri')">
+                <!-- <app-plus  (click)="addminus('Fri')"></app-plus> -->
+                <div class="col-md-2 col-lg-2 mt-4 mb-5">
+                <!-- <app-minus class="mb4" *ngFor="let item of minus[6]" (click)="remove('Fri')"></app-minus> -->
+                </div>
+        </div>
+        <!--------- End Days---------------------------- -->     
+</div>
+<!-- ///save button -->
+<div style="display:flex;justify-content: center">
+    <button class="btn btnsave m-4" style="width: 100px;font-size: 19px;border: 2px dashed #4F709C;" (click)="Save()">{{'userinfo.Save' |translate}}</button>
+</div>
+

@@ -1,0 +1,92 @@
+<form action="" [formGroup]="dataform">
+  <div class="card mb-5" style="border-radius: 15px" [dir]="'dir' |translate">
+    <div class="card-body p-4">
+      <div class="form-outline">
+        <label class="form-label" for="typeNumber" style="font-weight: bold">{{'userinfo.Theresourceisavailableto' | translate}}
+        </label>
+        <input type="number" id="typeNumber" [(ngModel)]="number" value="TheResourceisavailableto" name="TheResourceisavailableto" formControlName="TheResourceisavailableto" class="form-control" />
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="card-body">
+            <!-- part1 -->
+           <div class="row">
+            <div class="col-md-8 col-lg-8">
+              <div>
+                <label for=""
+                 style="font-weight: bold" style="font-weight: bold">{{'userinfo.Resourcetime' | translate}}</label>
+              </div>
+              <div class="form-check form-check-inline m-2">
+                <input class="form-check-input" type="radio" formControlName="Resourcetime" (change)="check($event)" [(ngModel)]="showDiv" name="Resourcetime" id="Radio1"
+                  value="show" [value]="'userinfo.Fixedtime' | translate"/>
+                <label class="form-check-label" for="Radio1">
+                  <i class="fa-solid fa-clock"></i>
+                  {{'userinfo.Fixedtime' | translate}}</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio"  formControlName="Resourcetime" (change)="check($event)" [(ngModel)]="showDiv" name="Resourcetime" id="Radio2"
+                  value="hide" [value]="'userinfo.Servicetime' | translate"/>
+                <label class="form-check-label" for="Radio2">
+                  <i class="fa-solid fa-rectangle-list"></i>
+                  {{'userinfo.Servicetime' | translate}}</label>
+              </div>
+            </div>
+            <!-- ******* -->
+          <!-- ********************* increment & decrement ( hide & show this divvvv counter)********************************** -->
+            <div class="col-md-4 col-lg-4 mb-2">
+              <div *ngIf="toggleShowHide2 == true" style="margin-top: 30px">
+                <div class="input-group">
+                  <span class="input-group-btn">
+                    <button type="button" style="height: 44px; width: 50px" (click)="decrement()">
+                      <i style="color:white;font-size: 17px" class="fa-solid fa-circle-minus"></i>
+                    </button>
+                  </span>
+                  <input type="text" id="quantity" name="quantity" class="form-control input-number" 
+                  value="{{ counter }}" formControlName="counter" [(ngModel)]="counter" min="1" max="100" style="border-radius:5px;"/>
+                  <span class="input-group-btn">
+                    <button type="button" style="height: 44px; width: 50px" (click)="increment()">
+                      <i style="color:white;font-size: 17px;" class="fa-solid fa-circle-plus"></i>
+                    </button>
+                  </span>
+                </div>
+            </div>
+           </div>
+  
+            <!-- --------------------part2 ------------------------->
+            <!-- <hr> -->
+            <div class="row">
+              <div class="col-md-8 col-lg-8 mt-2">
+                <div>
+                  <label for="" style="font-weight: bold">{{'userinfo.Multiplebooking' | translate}}</label>
+                </div>
+                <div class="form-check form-check-inline m-2" >
+                  <input class="form-check-input" formControlName="Multiplebooking" (change)="checktwo($event)" [(ngModel)]="showDiv2" type="radio" name="Multiplebooking"
+                    id="iRadio1" value="hide" [value]="'userinfo.Onlyone' | translate"/>
+                  <label class="form-check-label" for="iRadio1">
+                    <i class="fa-solid fa-user-large"></i>
+                    {{'userinfo.Onlyone' | translate}}</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" formControlName="Multiplebooking" (change)="checktwo($event)" [(ngModel)]="showDiv2" type="radio" name="Multiplebooking"
+                    id="iRadio2" value="show" [value]="'userinfo.reservationallinsametime' | translate"/>
+                  <label class="form-check-label" for="iRadio2" >
+                    <i class="fa-solid fa-user-group"></i>
+                    {{'userinfo.reservationallinsametime' | translate}}</label>
+                </div>
+              </div>
+       <!-- ********************************* show && hide divv2 ***************************************** -->
+        <div class="col-md-4 col-lg-4" *ngIf="toggleShowHide==true">
+          <div  style="margin-top: 25px;margin-left: 19px;">
+            <input style="max-width:190px;" type="number" formControlName="numberofperson" id="typeNumber" class="form-control" value="numberofperson"  />
+          </div>
+        </div>
+       
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</form>

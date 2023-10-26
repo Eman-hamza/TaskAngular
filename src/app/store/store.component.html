@@ -1,0 +1,47 @@
+<section class="vh-100" style="background-color: #eee;" [dir]="'dir' |translate">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-md-9 col-lg-7 col-xl-8">
+          <div class="card" style="border-radius: 15px; background-color: white;">
+            <div class="card-body p-4 text-black">
+              <div class="d-flex align-items-center mb-4">
+                <div class="flex-shrink-0">
+                  <img [src]="getImageFromLocalStorage()"
+                    alt="Generic placeholder image" class="img-fluid rounded-circle border border-dark border-3"
+                    style="width: 80px;height: 80px;">
+                </div>
+                <div class="flex-grow-1 ms-3">
+                  <div class="d-flex flex-row align-items-center mb-2">
+                    <h3 class="mb-0 me-2"><span style="font-weight:bold;"></span>{{namewith}}</h3>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <!-- <th scope="col">{{'userinfo.NameofResourcer' |translate}}</th> -->
+                    <th scope="col">{{'userinfo.Selectresourcetype' |translate}}</th>
+                    <th scope="col">{{'userinfo.Theresourceisavailableto' |translate}}</th>
+                    <th scope="col">{{'userinfo.Resourcetime' |translate}}</th>
+                    <th scope="col">{{'userinfo.Multiplebooking' |translate}}</th>
+                    <th scope="col">{{'userinfo.Determinethesupplier' |translate}}</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="container">
+                    <td>{{typeresources.typeResources }} </td>
+                    <td>{{Timeresources.TheResourceisavailableto}}</td>
+                    <td>{{Timeresources.Resourcetime}}<span style="font-weight: bold;"> {{Timeresources.counter}}</span></td>
+                    <td>{{Timeresources.Multiplebooking}} <span style="font-weight: bold;"style="font-weight: bold;">{{Timeresources.numberofperson}}</span></td>
+                    <td><span *ngFor="let item of Dayworks" class="mx-1">{{item | translate}} -</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

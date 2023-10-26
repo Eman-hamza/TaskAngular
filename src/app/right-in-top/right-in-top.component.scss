@@ -1,0 +1,12 @@
+.imgf{
+    border: 2px dashed #4F709C;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.imgf:hover{
+    scale: 1.1;
+}
+
+input[type="file"]{
+    display: none;
+  }

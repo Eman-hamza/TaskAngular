@@ -1,0 +1,81 @@
+	<!-- Navbar -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <!-- *//* -->
+  <body >
+    <nav  class="navbar fixed-top navbar-expand-lg navbar-light text-light" style="background-color:#4F709C;">
+      <!-- Container wrapper -->
+      <div class="container " [dir]="'dir' |translate">
+        <!-- Toggle button -->
+        <button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse"
+        aria-controls="collapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+
+          <span class="navbar-toggler-icon"></span>
+          </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="collapse" >
+          <!-- Navbar brand -->
+          <!-- <a class="navbar-brand mt-2 mt-sm-0" [routerLink]="['/HomePage']" routerLinkActive="active">
+              <i class="fa-solid fa-brain" style="color:#607D8B;font-size: 30px;"></i>
+          </a> -->
+          <!-- Left links -->
+          <!-- <div style="display: flex;justify-content: space-evenly;"> -->
+          <ul  class="nav navbar-nav me-auto " >
+            <!-- ****************************** for all ************************************* -->
+            <img src="../../assets/calendar.png" [routerLink]="['/home']" routerLinkActive="active" alt="" style="width:50px;height: 50px;cursor: pointer;padding: 2px;margin-top: 5px;">
+            <!-- <i class="fi fi-rr-calendar-clock" style="color:white;"></i> -->
+            <li class="nav-item active">
+              <a class="nav-link "  [routerLink]="['/home']" routerLinkActive="active">{{'userinfo.HOME' | translate}}</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link "  [routerLink]="['/NewResource']" routerLinkActive="active">{{'userinfo.Addresources' | translate}}
+              </a>
+            </li>                
+          </ul>
+          <!-- Left links -->
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+          <!-- Icon -->
+          <ul class="navbar-nav me-5 pl-5 lg-0">
+              <li class="nav-item active">
+                <a class="nav-link "  [routerLink]="['/login']" routerLinkActive="active">{{'userinfo.LOGIN' | translate}}</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link"  [routerLink]="['/BeforeRegister']" routerLinkActive="active">Register</a>
+              </li> -->
+              <button class="btn btnn" style="margin-right: 15px;">{{'userinfo.Register' | translate}}</button>
+              <!-- <li class="nav-item">
+                <a class="nav-link alogout" style="cursor:pointer">Logout</a>
+             
+              </li> -->
+              <div style="font-weight: bold;padding-top: 5px;">
+                <button type="button" class="btn btn" [ngStyle]="{'background-color':color}" style="width: 70px;margin-right:5px;height:auto;border-radius: 25px;border: 2px dashed white;color:white" (click)="changecurrentLang('en')" >EN</button>
+                <button type="button" class="btn btn" [ngStyle]="{'background-color':color2}" style="width: 70px; margin-right:5px;border-radius: 50px; border: 2px dashed white;color:white" (click)="changecurrentLang('ar')">AR</button>
+            </div>
+            </ul>
+          </div>
+        <!-- </div> -->
+        <!-- Right elements -->
+      <!-- </div> -->
+
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+  </body>
+  </html>
+
+    
+      <!-- Navbar -->
